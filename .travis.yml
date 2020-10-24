@@ -16,9 +16,11 @@ branches:
     - fix-lzop
 
 before_install:
-  - sudo apt-get install -yes lzop
+  - apt-get install -y lzop
   - gem update bundler
 script: bundle exec rake test
+
+sudo: false
 
 matrix:
   allow_failures:
